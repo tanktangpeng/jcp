@@ -1,0 +1,61 @@
+<script type="text/javascript" src="http://printfree.jatools.com/demos/jcpfree.js"></script>  公网引入
+
+<script type="text/javascript" src="http://print.jatools.com/jcp/0.99/jcp.js">  公网引入
+
+print : function(){
+			var myDoc = {
+					settings : {
+						paperWidth : 80,
+						paperHeight : "auto" // 小票打印，高度自动					
+					},
+					noMargins : true,
+					documents : document,
+					copyrights : '杰创软件拥有版权  www.jatools.com'
+				};
+				var jcp = getJCP();
+				// 调用打印方法
+//				jcp.printPreview(myDoc); // 打印预览
+//				jcp.print(myDoc, true); // 打印前弹出打印设置对话框
+				jcp.print(myDoc, false); 
+		},
+
+
+<div style="display:none;"><!--style="display:none;"-->
+	<div id="page1" style="width: 238px; padding: 40px 10px; background: white; margin: auto;"> <-- 必须要id=“page1”-->
+		<!-- <img class="jatools-coder" style="height: 80px;" src="http://127.0.0.1:31227/api?type=coder&amp;code=6938012345670&amp;style=type:ean13&amp;width=130&amp;height=80"> -->
+		<div class="shop_name" id="pos-t-shop"></div>
+		<div class="ul1">
+			<div id="pos-t-billno"></div>
+			<div id="pos-t-cashier"></div>
+			<div id="pos-t-checkoutCounter"></div>
+			<div id="pos-t-date"></div>
+		</div>
+		<p>-------------------------------------</p>
+		<table class="table1" style="width:100%">
+			<tbody>
+			<tr>
+				<td>商品</td>
+				<td>原价</td>
+				<td>数量</td>
+				<td>折扣</td>
+				<td>售价</td>
+				<td>金额</td>
+			</tr>
+			</tbody>
+			<tbody class="body" id="pos-t-table">
+				
+			</tbody>
+		</table>
+		<p>-----------------------------------</p>
+		<div class="ul2">
+			<span id="pos-t-payAmount"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="pos-t-settleAmount"></span><br>
+			<span id="pos-t-small"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="pos-t-qty"></span>
+			<div id="pos-t-smallAmount"></div>
+			<p id="pos-t-payList" ></p>
+			<div id="pos-t-shopMobile"></div>
+			<div id="pos-t-shopCode"></div>
+			<div id="pos-t-shopAddress"></div>
+			<div>谢谢惠顾！</div>
+		</div>
+	</div>
+</div>
